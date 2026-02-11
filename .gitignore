@@ -21,19 +21,18 @@ media/
 staticfiles/
 .env
 
-# Flutter
+# Flutter (Optimisé pour la réutilisation)
 mobile/.dart_tool/
 mobile/.flutter-plugins
 mobile/.flutter-plugins-dependencies
 mobile/.packages
-mobile/build/
-mobile/ios/
-mobile/android/
-mobile/linux/
-mobile/macos/
-mobile/windows/
-mobile/web/
 mobile/.metadata
+mobile/build/
+# On ne bloque plus les dossiers entiers, seulement les fichiers de config locaux
+mobile/android/local.properties
+mobile/android/key.properties
+mobile/ios/Flutter/Generated.xcconfig
+mobile/ios/Flutter/flutter_export_environment.sh
 
 # IDX
 
@@ -44,3 +43,5 @@ mobile/.metadata
 *.swo
 *~
 .DS_Store
+# IDX Data
+.idx/.data/
