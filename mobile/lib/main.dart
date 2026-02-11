@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
+import 'core/theme/app_theme.dart';
+import 'features/quiz/presentation/screens/exam_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -14,6 +16,7 @@ final router = GoRouter(
   routes: [
     GoRoute(path: '/', builder: (context, state) => const LoginScreen()),
     GoRoute(path: '/home', builder: (context, state) => const HomeScreen()),
+    GoRoute(path: '/quiz', builder: (context, state) => const QuizScreen()),
   ],
 );
 
@@ -25,14 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Django Flutter Stack',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6750A4),
-          brightness: Brightness.light,
-        ),
-        useMaterial3: true,
-        textTheme: GoogleFonts.interTextTheme(),
-      ),
+      theme: AppTheme.lightTheme,
       routerConfig: router,
     );
   }

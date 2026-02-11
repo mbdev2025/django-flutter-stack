@@ -53,6 +53,12 @@ class HomeScreen extends ConsumerWidget {
                   ),
                 ),
               ],
+              const SizedBox(height: 32),
+              ElevatedButton.icon(
+                onPressed: () => context.push('/quiz'),
+                icon: const Icon(Icons.play_arrow),
+                label: const Text('Lancer un Quiz Test'),
+              ),
             ],
           ),
         ),
